@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Siri Agro Foods Private Limited - Premium Soya Processing</title>
+    <meta
+        content="Siri Agro Foods - Leading soya processing manufacturer producing high-quality Soya Meal and Crude Soya Oil."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2D5A27", // Deep Forest Green from logo
+                        secondary: "#F9C535", // Golden Yellow from logo
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F3F4F6",
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right, rgba(45, 90, 39, 0.9), rgba(45, 90, 39, 0.6)), url('banner_bg.png')",
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body transition-colors duration-300">
+    <nav class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark shadow-md transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="block">
+                        <img alt="Siri Agro Foods Logo" class="h-20 md:h-24 w-auto max-w-[320px] object-contain"
+                            src="logo.png" />
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#">Home</a>
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#about">About Us</a>
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#products">Products</a>
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#manufacturing">Manufacturing</a>
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#delivery">Delivery Zones</a>
+                    <a class="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-medium transition-colors"
+                        href="#contact">Contact Us</a>
+                    <a class="px-5 py-2.5 rounded-full bg-secondary text-primary font-bold hover:bg-yellow-400 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                        href="#contact">
+                        Get a Quote
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none" type="button">
+                        <span class="material-icons-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div id="offcanvas-overlay"
+        class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0"></div>
+    <div id="offcanvas-menu"
+        class="fixed inset-y-0 right-0 max-w-xs w-full bg-white dark:bg-surface-dark z-[70] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
+        <div class="px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <img alt="Siri Agro Foods Logo" class="h-10 w-auto object-contain" src="logo.png" />
+            <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 focus:outline-none">
+                <span class="material-icons-outlined text-2xl">close</span>
+            </button>
+        </div>
+        <div class="px-6 py-6 flex-1 overflow-y-auto">
+            <nav class="flex flex-col space-y-4">
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#">Home</a>
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#about">About Us</a>
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#products">Products</a>
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#manufacturing">Manufacturing</a>
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#delivery">Delivery Zones</a>
+                <a class="mobile-nav-link text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary font-bold text-lg border-b border-gray-50 dark:border-gray-800 pb-2"
+                    href="#contact">Contact Us</a>
+            </nav>
+            <div class="mt-8">
+                <a class="mobile-nav-link block w-full text-center px-5 py-3 rounded-md bg-secondary text-primary font-bold hover:bg-yellow-400 transition-all shadow-md"
+                    href="#contact">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </div>
+    <header
+        class="relative bg-hero-pattern bg-cover bg-center h-[550px] md:h-[600px] flex items-center justify-center clip-path-slant mb-8 md:mb-12 pt-8 pb-16 md:py-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-secondary/90 text-primary font-bold text-xs md:text-sm mb-4 md:mb-6 uppercase tracking-wider shadow-lg">
+                500 Metric Tons Per Day Manufacturing Capacity
+            </span>
+            <h1
+                class="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl text-white mb-4 md:mb-6 leading-tight text-shadow">
+                Premium Quality Soya Processing <br />
+                <span class="text-secondary">Farm to Industry</span>
+            </h1>
+            <p
+                class="mt-4 text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-8 md:mb-10 font-medium text-shadow">
+                One of South India's leading Soya processing manufacturers delivering high-grade Soya Meal and Crude
+                Soya Oil across multiple states.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full px-4 sm:px-0">
+                <a class="px-8 py-3.5 rounded-md bg-white text-primary font-bold text-base md:text-lg hover:bg-gray-100 transition-all shadow-lg w-full sm:w-auto"
+                    href="#products">
+                    Explore Products
+                </a>
+                <a class="px-8 py-3.5 rounded-md bg-transparent border-2 border-white text-white font-bold text-base md:text-lg hover:bg-white/10 transition-all text-shadow w-full sm:w-auto"
+                    href="#contact">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 md:-mt-24 mb-12 md:mb-16 relative z-20"
+        id="manufacturing">
+        <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-xl p-6 md:p-8 border-t-4 border-secondary mb-8">
+            <h2
+                class="text-center text-primary dark:text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8">
+                Our
+                Manufacturing Strength</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-8 mb-8">
+                <div class="text-center">
+                    <div class="text-2xl md:text-4xl font-display font-bold text-primary dark:text-secondary mb-1">500
+                        MT/Day</div>
+                    <div
+                        class="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                        Processing
+                        Capacity</div>
+                </div>
+                <div class="text-center border-l border-gray-200 dark:border-gray-700">
+                    <div class="text-2xl md:text-4xl font-display font-bold text-primary dark:text-secondary mb-1">2
+                    </div>
+                    <div
+                        class="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                        Products
+                        <br class="hidden md:block" />(Soya Meal + Crude Oil)
+                    </div>
+                </div>
+                <div class="text-center md:border-l border-gray-200 dark:border-gray-700">
+                    <div class="text-2xl md:text-4xl font-display font-bold text-primary dark:text-secondary mb-1">5+
+                    </div>
+                    <div
+                        class="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                        States
+                        Served</div>
+                </div>
+                <div class="text-center border-l border-gray-200 dark:border-gray-700">
+                    <div class="text-2xl md:text-4xl font-display font-bold text-primary dark:text-secondary mb-1">100%
+                    </div>
+                    <div
+                        class="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                        Quality
+                        Checked Batches</div>
+                </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-center text-base md:text-lg max-w-4xl mx-auto">
+                Our plant operates with modern soya processing machinery ensuring maximum oil extraction efficiency and
+                high-protein Soya Meal output. With a daily capacity of 500 Metric Tons, we are equipped to fulfill bulk
+                orders reliably and on schedule.
+            </p>
+        </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-background-dark" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-12 lg:mb-0 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary rounded-full opacity-20 blur-xl"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary rounded-full opacity-20 blur-xl"></div>
+                    <img alt="Industrial Soya Processing Facility"
+                        class="rounded-xl shadow-2xl relative z-10 w-full h-auto object-cover border-4 border-white dark:border-gray-800"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVOAfu6e08NDk19icnDNOosYMm829yAUOiBnh74lHugOnN0QCEBi2CnGTswt7j86FulJxWGbkzV1aniCVBYQK_aPFmjnASj1e7wghkVyYlHfan7YaZIzSLfEO_U4U4eqjACh-hMThYcMtLiPFAA6BeijD3vAEaOEjzvVE2mx5d9e9pjx1FezUvwMcxosle0346serpO-EezweGhFiTWS5epmlXemhye7MkKrK23I2GH2v4wqfY9U4ANBQSDvHX8f2yjD0aUmWKtN4" />
+                </div>
+                <div>
+                    <h2
+                        class="text-primary dark:text-secondary font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-center lg:text-left">
+                        About Siri Agro Foods Private Limited
+                    </h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 text-base md:text-lg leading-relaxed text-center lg:text-left">
+                        Siri Agro Foods Private Limited is a dedicated agro-processing company specializing in the
+                        manufacturing of high-quality Soya Meal from premium soya bean seeds. Established with a
+                        commitment to quality and reliability, we operate a state-of-the-art processing facility with a
+                        capacity of 500 Metric Tons Per Day, supplying to animal feed manufacturers, poultry farms, aqua
+                        feed producers, and agro traders across South and West India.
+                    </p>
+                    <p
+                        class="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-base md:text-lg leading-relaxed text-center lg:text-left">
+                        Our manufacturing process ensures consistent protein content, optimal moisture levels, and
+                        superior nutritional value in every batch — making us a trusted supplier across multiple states.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start text-gray-700 dark:text-gray-200 text-base md:text-lg">
+                            <span
+                                class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                            <span>Advanced Solvent Extraction Plant</span>
+                        </li>
+                        <li class="flex items-start text-gray-700 dark:text-gray-200 text-base md:text-lg">
+                            <span
+                                class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                            <span>Strategically located for optimal logistics</span>
+                        </li>
+                        <li class="flex items-start text-gray-700 dark:text-gray-200 text-base md:text-lg">
+                            <span
+                                class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                            <span>Adherence to strict quality standards</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50 dark:bg-gray-900" id="products">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-16">
+                <h2
+                    class="text-primary dark:text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-16 text-center">
+                    Our Products</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-10">
+                <div
+                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-all z-10"></div>
+                        <img alt="Soya Meal Heap"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQge5RMWz-ep0nWUO96nq7xQ7nHCXPi9b2SuPuCregsjOiFVJ94COivSCuyZeYHYa0Ofd6LEoBfYaSjnIeMghIJ1VZQbjofZGJdDBuPTAgsdY30nC4fb-Ati48CKoMwu0rxP7k-2zQ3byPB2WTpjjEpJXFFVqZ5A7gjV4IXZNk2Do_gQ9RRy6kBXKZlXbaVkzOWiqfaWenKsNbAqmTDZJ02eFqqZ4zoP-5UJB32l4SAqfFXM1wZPDLDoRW1SaMgnhVuTww0X9BXm4" />
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-primary dark:text-white mb-3 text-center md:text-left">
+                            Soya Meal (De-oiled Cake)</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm md:text-base text-center md:text-left">
+                            Manufactured from good quality soya bean seeds,
+                            our Soya Meal is rich in protein and widely used in poultry, cattle, and aqua feed
+                            industries.</p>
+                        <ul class="space-y-3 mb-2 md:mb-6 text-sm md:text-base">
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div><span class="font-medium mr-2">Protein Content:</span> <span
+                                        class="font-bold text-primary dark:text-secondary">46–48%</span></div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div><span class="font-medium mr-2">Moisture:</span> <span
+                                        class="font-bold text-primary dark:text-secondary">≤12%</span></div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>Available in bulk supply</div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>Consistent quality, every batch</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-secondary/10 group-hover:bg-secondary/0 transition-all z-10">
+                        </div>
+                        <img alt="Crude Soya Oil"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNGgTaL3xob-MR77p_xpYBz8xeOxnMBiiTuvo-wkqdNjoajbwStRhoYOg_tc4GNdexGzRAo5zzqJEm-l8u-sR-ZHsCzCyJxwo3PelJGm83xu8DFrfo7GeknklWLbLbPBqUS2J2JRE2jxJFR2O5hbvbWjcebkKzs-wt8Uo6jIbcqrAoLNcNhvzFug0QqCutcubwFdjwCyHuVu-T0Eec_RhEqVpqpbqrQqfuV--9C0fiI9cJWHBJF6SAwJ2lF4KM2MFG9kmxxKqZyI" />
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-primary dark:text-white mb-3 text-center md:text-left">
+                            Crude Soya Oil (Byproduct)</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm md:text-base text-center md:text-left">
+                            As a natural byproduct of our Soya Meal
+                            manufacturing process, we produce and supply Crude Soya Oil — already being actively
+                            delivered across key states.</p>
+                        <ul class="space-y-3 mb-2 md:mb-6 text-sm md:text-base">
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>100% natural extraction</div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>Suitable for further refining</div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>Bulk quantities available</div>
+                            </li>
+                            <li class="flex items-start text-gray-700 dark:text-gray-300">
+                                <span
+                                    class="material-icons-outlined text-secondary mr-3 mt-0.5 w-6 flex-shrink-0">check_circle</span>
+                                <div>Pan-South India delivery</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+                class="text-center text-primary dark:text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12">
+                Why
+                Partner with Siri Agro Foods?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">factory</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">High Capacity</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">500 MT/day plant ensures no supply shortage.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">verified</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">Consistent Quality</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Premium soya bean seeds, tested every batch.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">inventory_2</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">Dual Products</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Both Soya Meal and Crude Oil available.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">local_shipping</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">Active Delivery Network</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Proven supply chain across 5 states.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">savings</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">Competitive Pricing</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Direct manufacturer, no middlemen.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow">
+                    <div
+                        class="h-16 w-16 bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons-outlined text-3xl">schedule</span>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-100">Reliable Timelines</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">On-time dispatch commitment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-primary dark:bg-green-900 text-white relative overflow-hidden" id="delivery">
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2
+                        class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-white text-center md:text-left">
+                        Currently Delivering Across
+                    </h2>
+                    <p class="text-gray-200 text-base md:text-lg mb-6 md:mb-8 text-center md:text-left">
+                        We have an established logistics network ensuring timely and consistent delivery of Crude Soya
+                        Oil to buyers across Tamil Nadu, Karnataka, Andhra Pradesh, Telangana, and Maharashtra. Soya
+                        Meal supply is also available pan-India.
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-10 md:mb-0">
+                        <h4 class="text-secondary font-bold text-lg md:text-xl mb-4 text-center md:text-left">Crude Soya
+                            Oil — Active Delivery States</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                            <div class="flex items-start space-x-3 text-sm md:text-base">
+                                <span class="material-icons-outlined text-secondary">check_circle</span>
+                                <span class="font-medium">Tamil Nadu</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm md:text-base">
+                                <span class="material-icons-outlined text-secondary">check_circle</span>
+                                <span class="font-medium">Karnataka</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm md:text-base">
+                                <span class="material-icons-outlined text-secondary">check_circle</span>
+                                <span class="font-medium">Andhra Pradesh</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm md:text-base">
+                                <span class="material-icons-outlined text-secondary">check_circle</span>
+                                <span class="font-medium">Telangana</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm md:text-base">
+                                <span class="material-icons-outlined text-secondary">check_circle</span>
+                                <span class="font-medium">Maharashtra</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div
+                        class="relative w-full max-w-md aspect-square bg-white/5 rounded-full flex items-center justify-center border-4 border-dashed border-secondary/30">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-icons-outlined text-9xl text-white/20">map</span>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <h3 class="text-4xl font-bold text-secondary mb-2">5+</h3>
+                            <p class="text-white font-medium uppercase tracking-widest">States Covered</p>
+                        </div>
+                        <div class="absolute top-1/4 right-1/4 w-4 h-4 bg-secondary rounded-full animate-pulse"></div>
+                        <div
+                            class="absolute bottom-1/3 right-1/3 w-4 h-4 bg-secondary rounded-full animate-pulse delay-75">
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/3 w-4 h-4 bg-secondary rounded-full animate-pulse delay-150">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+                class="text-center text-primary dark:text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12">
+                Industries We Serve</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 justify-center max-w-6xl mx-auto">
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">egg</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Poultry Feed
+                        Manufacturers</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">grass</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Cattle &amp; Dairy
+                        Feed Producers</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">set_meal</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Aqua Feed
+                        Industry</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">water_drop</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Oil Refineries (Crude
+                        Oil)</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">pets</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Animal Nutrition
+                        Companies</span>
+                </div>
+                <div
+                    class="flex flex-col items-center p-4 md:p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm text-center hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                    <span
+                        class="material-icons-outlined text-4xl md:text-5xl text-primary dark:text-secondary mb-2 md:mb-3">storefront</span>
+                    <span class="font-bold text-gray-800 dark:text-gray-200 text-sm md:text-base">Agro Traders &amp;
+                        Distributors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-20 bg-white dark:bg-background-dark" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="grid lg:grid-cols-2 gap-8 md:gap-12 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl overflow-hidden">
+                <div class="p-6 sm:p-8 md:p-12">
+                    <h2
+                        class="text-primary dark:text-white font-display font-bold text-2xl md:text-3xl mb-2 text-center md:text-left">
+                        Get in Touch</h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-400 mb-6 md:mb-8 text-center md:text-left text-sm md:text-base">
+                        Ready to place a bulk order or need a quote? Reach
+                        out to us today.</p>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="name">Name*</label>
+                                <input
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="name" placeholder="Your Name" type="text" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="company">Company Name*</label>
+                                <input
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="company" placeholder="Your Company" type="text" required />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="phone">Phone Number*</label>
+                                <input
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="phone" placeholder="+91 XXXXX XXXXX" type="tel" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="email">Email Address*</label>
+                                <input
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="email" placeholder="you@company.com" type="email" required />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="location">State / Location*</label>
+                                <input
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="location" placeholder="Your State" type="text" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="product">Product Interested In*</label>
+                                <select
+                                    class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="product" required>
+                                    <option>Soya Meal</option>
+                                    <option>Crude Soya Oil</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                for="message">Message / Quantity Required</label>
+                            <textarea
+                                class="w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                id="message" placeholder="Please specify your requirement..." rows="4"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-primary text-white font-bold py-3 px-4 rounded-md hover:bg-green-800 transition-colors shadow-md"
+                            type="button">
+                            Submit Enquiry
+                        </button>
+                    </form>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-900 p-6 sm:p-8 md:p-12 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center md:text-left">
+                            Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-sm mr-4 text-primary dark:text-secondary">
+                                    <span class="material-icons-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Head Office &amp; Plant</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                        [Add registered address]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-sm mr-4 text-primary dark:text-secondary">
+                                    <span class="material-icons-outlined">phone</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Call Us</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                        [Add number]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-sm mr-4 text-primary dark:text-secondary">
+                                    <span class="material-icons-outlined">email</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Email Us</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                        [Add email]
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="mt-8 h-48 w-full bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden relative group">
+                        <img alt="Map Location"
+                            class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuByN4eoGdBr_XcXd6RumbwxhXT5ijchUd68IGLR6-Yg3BZvsO6z5fJ_6iEgIlDmMIP0Q_3b-RvjZ7F2bvFHAXab-aKpkfXeS81ywUzm1-tCPINPm9F5CZE4nOLZ7Se2bnjJEjsV1vTyZ7_YfbZP5xE-AZBkoTrpxzv2pIIV3nAieDtky5CGIi4n0xS-UQ94hsuow89VuJSW4mwTjvKNCNkhlVw8VAn9KGDH_HrGdN6JeT1oHdyUqWZRdv5doCLLeScENem109PdAtk" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <a class="bg-white text-primary px-4 py-2 rounded-md text-sm font-bold shadow-md hover:bg-gray-100 transition-colors"
+                                href="#">
+                                View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-primary text-white pt-8 pb-4 border-t border-green-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center py-6 gap-6">
+                <!-- Left: Copyright -->
+                <div class="text-gray-300 text-sm text-center md:text-left flex-1">
+                    © 2025 Siri Agro Foods Private Limited. All Rights Reserved.
+                </div>
+
+                <!-- Center: Links -->
+                <div class="flex flex-wrap justify-center gap-6 flex-1">
+                    <a href="#"
+                        class="text-gray-300 hover:text-white hover:text-secondary transition-colors text-sm">Home</a>
+                    <a href="#about"
+                        class="text-gray-300 hover:text-white hover:text-secondary transition-colors text-sm">About</a>
+                    <a href="#products"
+                        class="text-gray-300 hover:text-white hover:text-secondary transition-colors text-sm">Products</a>
+                    <a href="#contact"
+                        class="text-gray-300 hover:text-white hover:text-secondary transition-colors text-sm">Contact</a>
+                </div>
+
+                <!-- Right: Tagline -->
+                <div class="text-secondary font-medium text-sm text-center md:text-right flex-1">
+                    Delivering Quality Across South India
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const offcanvasMenu = document.getElementById('offcanvas-menu');
+        const offcanvasOverlay = document.getElementById('offcanvas-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            offcanvasOverlay.classList.remove('hidden');
+            // Small delay to allow display flex to apply before opacity transition starts
+            setTimeout(() => {
+                offcanvasOverlay.classList.remove('opacity-0');
+                offcanvasMenu.classList.remove('translate-x-full');
+            }, 10);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            offcanvasOverlay.classList.add('opacity-0');
+            offcanvasMenu.classList.add('translate-x-full');
+
+            // Wait for transition to finish before hiding overlay
+            setTimeout(() => {
+                offcanvasOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Event listeners
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMenu);
+        }
+
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', closeMenu);
+        }
+
+        if (offcanvasOverlay) {
+            offcanvasOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Close menu when clicking any nav link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    });
+</script>
+
+</html>
